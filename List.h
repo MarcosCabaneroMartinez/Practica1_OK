@@ -4,26 +4,52 @@
 template <typename T>
 class List {
     public:
-        // Destructor de la calse
-        virtual ~List() {}
+        virtual void insert(int pos, const T& e) = 0;
 
-        virtual void insert(const T& element) = 0;
+        virtual void append(const T& e);
 
-        virtual bool remove(const T& element) = 0;
+        virtual void prepend(const T& e);
 
-        // Obtiene el elemento en una posición específica
-        virtual T get(int index) const = 0;
+        virtual T remove(int pos) = 0;
 
-        // Devuelve el tamaño actual de la lista
-        virtual int size() const = 0;
+        virtual T get(int pos) const = 0;
 
-        // Elimina la lista
-        virtual void clear() = 0;
+        virtual int search(const T& e) const = 0;
 
-        // Verifica si la lista está vacía
-        virtual bool isEmpty() const = 0;
+        virtual int size() = 0;
 
-        virtual int find(const T& element) const = 0;
+        virtual bool Empty() const = 0;
+
 };
 
 #endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
